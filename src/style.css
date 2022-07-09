@@ -1,0 +1,84 @@
+* {
+    color: #fbe4fd;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+    font-family: 'Montserrat';
+    animation: comein 1s;
+}
+html {
+background-image: url('background.png');
+background-size:inherit;
+animation: scroll 175s linear infinite;
+}
+
+@keyframes comein {
+0% { opacity: 0;}
+50% { opacity: 50;}
+100% { opacity: 100;}
+}
+
+@keyframes scroll {
+from {background-position: bottom left;
+}
+to {
+    background-position: top right;
+}
+}
+
+#consolebox {
+    width: 70vw;
+    height: 90vh;
+    align-self: left;
+    text-align: left;
+    border: 5px dashed #18181b;
+    border-radius: 5px;
+    padding: 5px;
+    padding-right: 2.5px;
+    margin: 10px;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 1vh;
+    left: 2vw;
+    overflow-y: auto;
+}
+
+#preformancebox {
+    width: 20vw;
+    height: 90vh;
+    align-self: right;
+    text-align: center;
+    border: 5px dashed #18181b;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 2.5px;
+    margin: 10px;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+}
+
+hr {
+    border: 1px dotted #18181b;
+    background-color: rgba(0,0,0,0.8);
+    height:2px;
+    width: 90%;
+}
+
+div {
+    display: inline-block;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    padding-left: 2%;
+    font-size: 200%;
+    background-color: rgba(0,0,0,0.8)
+}
+
+body {
+    display: block;
+}

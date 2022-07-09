@@ -1,0 +1,23 @@
+{
+  "name": "apollo.console",
+  "version": "0.0.1",
+  "description": "Better Console with System Information!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noscxped/apollo.console.git"
+  },
+  "author": "Apollo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noscxped/apollo.console/issues"
+  },
+  "homepage": "https://github.com/noscxped/apollo.console#readme",
+  "dependencies": {
+    "electron": "^6.1.12"
+  }
+}
