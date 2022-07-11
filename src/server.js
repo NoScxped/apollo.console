@@ -9,12 +9,32 @@ function log(string){
 var http = require('http')
 
 const requestListener = function (req, res) {
-    res.writeHead(200);
-    res.end('Hello, World!');
+
+    res.setHeader("Content-Type", "application/json");
+
+    let str = []
+
+    req.on('data', chunk => {
+        str.push(chunk)
+      });
+      req.on('end', () => {
+        try{
+          log(JSON.parse(str).name + ` › ` + JSON.parse(str).message)
+        }catch{
+          res.end(`{"message": "Expected Message"}`)
+        }
+        
+      });
+    
+
+    
   }
+var host = 'localhost';
+var port = 8000
 
-var port = 8080
 const server = http.createServer(requestListener);
-server.listen(port);
+server.listen(port, host, () => {
+    log(`Server is running on http://${host}:${port}!`);
+});
 
-log(`Server Running on port ` + port + "!")
+
